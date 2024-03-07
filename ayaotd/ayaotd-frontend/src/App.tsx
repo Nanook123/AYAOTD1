@@ -4,6 +4,7 @@ import io, { Socket } from "socket.io-client"
 import React from 'react';
 import MessageInput from "./messageInput.tsx"
 import Message from "./message.tsx"
+import Login from "./login.tsx"
 
 function App() {
      const [socket, setSocket] = useState<Socket>();
@@ -29,6 +30,7 @@ function App() {
      return (
           <>
           { "" }
+          <Login user={user} />
           <MessageInput send={send}/>
           <Message messages={messages}/>
           </>
